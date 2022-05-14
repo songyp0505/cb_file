@@ -32,4 +32,11 @@ jobs:
         run: pip install -r ./requirements.txt
       - name: 'Working'
         run: python ./cb_file.py
+      - name: push changes to remote
+        run: |
+          git config --global user.name "user mane"
+          git config --global user.email "user email"
+          git add -A
+          git commit -m "commit message"
+          git push
          
