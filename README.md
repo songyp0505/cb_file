@@ -14,7 +14,10 @@ pip install -r requriements.txt
 
 ## Chrome版本：
 
- 96.0.4664.110（正式版本）项目已经附上chromedriver了
+ Windows：
+ 101.0.4951.67（正式版本）项目已经附上chromedriver了
+ Linux：
+ 89.0.4389.23版本
 
 ## 程序入口：
 

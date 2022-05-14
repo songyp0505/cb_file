@@ -9,6 +9,7 @@ from PyPDF2 import PdfFileMerger
 opt = ChromeOptions()            # 创建Chrome参数对象
 opt.headless = True              # 把Chrome设置成可视化无界面模式，windows/Linux 皆可
 driver = Chrome(options=opt)     # 创建Chrome无界面对象
+
  
 #使用无界面浏览器访问中国经营报电子版
 driver.get('http://dianzibao.cb.com.cn/')
