@@ -10,7 +10,6 @@ opt = ChromeOptions()            # 创建Chrome参数对象
 opt.headless = True              # 把Chrome设置成可视化无界面模式，windows/Linux 皆可
 driver = Chrome(options=opt)     # 创建Chrome无界面对象
 
- 
 #使用无界面浏览器访问中国经营报电子版
 driver.get('http://dianzibao.cb.com.cn/')
 time.sleep(5)
@@ -55,8 +54,15 @@ for url in pdf_urls:
 
 #pdf文件合并
 target_path = dir_name
-pdf_lst = [f for f in os.listdir(target_path) if f.endswith('.pdf')]
-pdf_lst = [os.path.join(target_path, filename) for filename in pdf_lst]
+# pdf_lst = [f for f in os.listdir(target_path) if f.endswith('.pdf')]
+# pdf_lst = [os.path.join(target_path, filename) for filename in pdf_lst]
+
+#path = os.listdir(target_path)     # 输入文件夹地址
+files = os.listdir(target_path)   # 读入文件夹
+num_pdf = len(files)
+name_list = [str(name)+".pdf" for name in range(1,num_pdf+1)]
+pdf_lst = [os.path.join(target_path, filename) for filename in name_list]
+
 
 file_merger = PdfFileMerger()
 for pdf in pdf_lst:
