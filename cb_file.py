@@ -67,5 +67,8 @@ pdf_lst = [os.path.join(target_path, filename) for filename in name_list]
 file_merger = PdfFileMerger()
 for pdf in pdf_lst:
     file_merger.append(pdf)     # 合并pdf文件
+    os.remove(pdf)   #删除文件
 file_merger.write(dir_name+".pdf")
+os.removedirs(target_path)   #删除空文件夹
+
 print('合并完成')
