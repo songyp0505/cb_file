@@ -2,7 +2,8 @@ import os
 import shutil
 
 # 获取该目录下的所有文件
-files = os.listdir(source_directory)
+currentPath = os.getcwd()
+files = os.listdir(currentPath)
 
 # 遍历每个文件
 for file_name in files:
