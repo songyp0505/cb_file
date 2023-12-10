@@ -13,12 +13,12 @@ for file_name in files:
         month = file_name[5:7]
         
         # 创建目标目录（如果不存在的话）
-        target_directory = os.path.join(source_directory, year, month)
+        target_directory = os.path.join(currentPath, year, month)
         if not os.path.exists(target_directory):
             os.makedirs(target_directory)
         
         # 文件的原始路径
-        source_file_path = os.path.join(source_directory, file_name)
+        source_file_path = os.path.join(currentPath, file_name)
         
         # 文件的目标路径
         target_file_path = os.path.join(target_directory, file_name)
